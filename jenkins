@@ -1,0 +1,41 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                echo 'checking'
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                echo 'Build'
+                
+            }
+        }
+        
+        stage('Test') {
+            steps {
+                echo 'Test'
+                
+            }
+        }
+        
+        stage('Sonarqube Analysis') {
+            steps {
+                echo 'Sonarqube Analysis'
+                // Perform SonarQube analysis here
+                // You need to add the commands or scripts to run SonarQube analysis
+            }
+        }
+        
+        stage('Continuous Deployment') {
+            steps {
+                echo 'Continuous Deployment'
+                // Perform continuous deployment tasks here
+                // You need to add the commands or scripts for deployment
+            }
+        }
+    }
+}
